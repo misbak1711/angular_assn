@@ -1,0 +1,49 @@
+<div class="trip-planner-container">
+  <h2>Trip Planner</h2>
+  <form (ngSubmit)="onSubmit(tripPlannerForm)" #tripPlannerForm="ngForm" novalidate>
+    <div class="form-group">
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" ngModel required #destination="ngModel">
+      <div *ngIf="(destination.invalid && (destination.dirty || destination.touched)) || (tripPlannerForm.submitted && destination.invalid)" class="error">
+        Destination is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="travelDates">Travel Dates:</label>
+      <input type="date" id="startDate" name="startDate" ngModel required #startDate="ngModel">
+      <input type="date" id="endDate" name="endDate" ngModel required #endDate="ngModel">
+      <div *ngIf="((startDate.invalid && (startDate.dirty || startDate.touched)) || (endDate.invalid && (endDate.dirty || endDate.touched))) || (tripPlannerForm.submitted && (startDate.invalid || endDate.invalid))" class="error">
+        Both travel dates are required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="numberOfTravelers">Number of Travelers:</label>
+      <input type="number" id="numberOfTravelers" name="numberOfTravelers" ngModel required min="1" #numberOfTravelers="ngModel">
+      <div *ngIf="(numberOfTravelers.invalid && (numberOfTravelers.dirty || numberOfTravelers.touched)) || (tripPlannerForm.submitted && numberOfTravelers.invalid)" class="error">
+        Number of travelers must be at least 1.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Accommodation Preferences:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="accommodationPreferences" value="Hotel" ngModel> Hotel</label>
+        <label><input type="checkbox" name="accommodationPreferences" value="Airbnb" ngModel> Airbnb</label>
+        <label><input type="checkbox" name="accommodationPreferences" value="Hostel" ngModel> Hostel</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Activities:</label>
+      <select name="activities" ngModel multiple>
+        <option value="Hiking">Hiking</option>
+        <option value="Sightseeing">Sightseeing</option>
+        <option value="Dining">Dining</option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="tripPlannerForm.invalid">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,55 @@
+.header {
+    background-color: rgb(115, 11, 11);
+    color: yellow;
+    padding: 1rem 0;
+  }
+
+  .header h1, .header p {
+    display: inline;
+    margin: 0;
+    color: yellow; /* Or any color that contrasts with your background */
+  }
+  
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: yellow;
+    text-decoration: none;
+    font-family: cursive;
+  }
+  
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li {
+    display: inline;
+    font-size: 1.2rem;
+  }
+  
+  .nav-links a {
+    color: yellow;
+    text-decoration: none;
+    /* padding: 0.5rem 1rem; */
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: teal;
+  }
+  

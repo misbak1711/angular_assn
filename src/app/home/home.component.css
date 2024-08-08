@@ -1,0 +1,76 @@
+/* Image Container Style */
+.image-container {
+    height: 160vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+}
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.content {
+    position: relative;
+    z-index: 10;
+    color: ghostwhite;
+    text-align: center;
+    padding: 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+.action-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.action-buttons a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    background-color:  rgb(115, 11, 11);; /* Semi-transparent background */
+    color: yellow;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.action-buttons a:hover {
+    background-color: rgb(66, 122, 122); /* Darker shade for hover effect */
+    transform: scale(1.05); /* Slight scale up effect on hover */
+}
+.section-content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+.section-content h2 {
+    font-size: 2rem; /* Increase font size for headings */
+    margin-bottom: 1rem;
+}
+.section-content p {
+    font-size: 1.15rem; /* Increase font size for paragraphs */
+    margin-bottom: 1.5rem;
+}
+.section-content ul {
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0; /* Remove padding */
+    font-size: 1.15rem; /* Increase font size for list items */
+}
+.section-content li {
+    margin-bottom: 1rem; /* Space between list items */
+}
+.footer {
+    background-color:  rgb(115, 11, 11);; /* Slightly darker gray for the footer */
+    color: yellow;
+    padding: 1rem; /* Adjust padding to ensure space is sufficient */
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
